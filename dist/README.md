@@ -7,7 +7,6 @@ let app = await magnet([
   fromM('config'),
   fromM('bunyan'),
   fromM('folder-loader'),
-  fromM('https'),
-  fromM('https/start'),
+  fromM('<%= npmModule %>'),
 ]);
 ```

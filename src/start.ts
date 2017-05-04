@@ -6,8 +6,8 @@ export default class MagnetHttpsStart extends Module {
 
   async setup () {
     const log = this.log
-    this.insert('httpsServer', this.app.https.listen(this.config.port, function () {
+    this.insert(this.app.https.listen(this.config.port, function () {
       log.info('Https listening at port', this.address().port)
-    }))
+    }), 'httpsServer')
   }
 }
