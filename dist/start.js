@@ -15,9 +15,9 @@ class MagnetHttpsStart extends module_1.Module {
     setup() {
         return __awaiter(this, void 0, void 0, function* () {
             const log = this.log;
-            this.insert('httpsServer', this.app.https.listen(this.config.port, function () {
+            this.insert(this.app.https.listen(this.config.port, function () {
                 log.info('Https listening at port', this.address().port);
-            }));
+            }), 'httpsServer');
         });
     }
 }

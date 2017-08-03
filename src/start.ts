@@ -1,8 +1,10 @@
 import { Module } from 'magnet-core/module'
 
 export default class MagnetHttpsStart extends Module {
-  get moduleName () { return 'https' }
-  get defaultConfig () { return __dirname }
+  init () {
+    this.moduleName = 'https'
+    this.defaultConfig = __dirname
+  }
 
   async setup () {
     const log = this.log
